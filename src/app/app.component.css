@@ -3,7 +3,7 @@
 }
 
 .element-bg-img img {
-    height: 200px;
+    min-height: 200px;
 }
 
 .teddy-text img {
