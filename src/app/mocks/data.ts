@@ -7,7 +7,7 @@ const products: IProduct[] = [
         img2: './assets/images/santorini2.jpg',
         title: 'Santorini',
         address: 'Greece, Santorini',
-        phone: 304326548,   // дополнительно задание pipe для форматирования
+        phone: '394326548',   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Current weather',
             icon: './assets/images/cloudy.png',
@@ -27,7 +27,7 @@ const products: IProduct[] = [
         img2: './assets/images/crete3.jpg',
         title: 'Heraklion',
         address: 'Greece, Heraklion',
-        phone: 304326654,   // дополнительно задание pipe для форматирования
+        phone: '394326654',   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Current weather',
             icon: './assets/images/cloudy.png',
@@ -47,7 +47,7 @@ const products: IProduct[] = [
         img2: './assets/images/crete4.jpg',
         title: 'Chania',
         address: 'Greece, Chania',
-        phone: 304326987,   // дополнительно задание pipe для форматирования
+        phone: '394326987',   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Current weather',
             icon: './assets/images/cloudy.png',
@@ -67,7 +67,7 @@ const products: IProduct[] = [
         img2: './assets/images/crete3.jpg',
         title: 'Rethymnon',
         address: 'Greece, Rethymnon',
-        phone: 304326653,   // дополнительно задание pipe для форматирования
+        phone: '394326653',   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Current weather',
             icon: './assets/images/cloudy.png',
@@ -87,7 +87,7 @@ const products: IProduct[] = [
         img2: './assets/images/santorini1.jpg',
         title: 'Agios Nikolaos',
         address: 'Greece, Agios Nikolaos',
-        phone: 304326876,   // дополнительно задание pipe для форматирования
+        phone: '394326876',   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Current weather',
             icon: './assets/images/cloudy.png',
@@ -107,7 +107,7 @@ const products: IProduct[] = [
         img2: './assets/images/crete1.jpg',
         title: 'Sitia',
         address: 'Greece, Sitia',
-        phone: 304326543,   // дополнительно задание pipe для форматирования
+        phone: '394326543',   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Current weather',
             icon: './assets/images/cloudy.png',

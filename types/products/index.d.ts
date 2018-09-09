@@ -3,7 +3,7 @@ interface IProduct {
     img2: string,
     title: string,
     address: string,
-    phone: number,   // дополнительно задание pipe для форматирования
+    phone: string,   // дополнительно задание pipe для форматирования
     weather: {
         title:string,
         icon:string,
