@@ -1,0 +1,12 @@
+.activity-list li:last-child {
+    border-right: none;
+}
+
+.element-bg-img img {
+    height: 200px;
+}
+
+.teddy-text img {
+    width: 105px;
+    height: 105px;
+}
