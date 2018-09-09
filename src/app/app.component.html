@@ -1,20 +1,61 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<app-header></app-header>
 
+<div class="element" *ngIf="products$ | async as products">
+  <div class="element-left">
+    <div class="element-bg-img" >
+      <img [src]="src1 || products[0].img1"  alt="" class="img-responsive">
+    </div>
+    <div class="element-left-bottom">
+      <div class="ele-strip">
+        <ul class="activity-list">
+          <li *ngFor="let type of types">
+            <app-activity-type [type]="type" (typeSelected)="searchType = type"></app-activity-type>
+          </li>
+        </ul>
+      </div>
+      <div class="village">
+        <h3>Crete resorts & like</h3>
+        <span class="line"> </span>
+        <div class="activity_box">
+          <div class="scrollbar" id="style-2">
+            <div class="activity-row">
+              <app-activity-card *ngFor="let product of products | productFilter:searchType; phone" [product]="product" (click)="src1=product.img1; src2=product.img2; temperature=product.weather.temperature; water=product.weather.water; followers=product.social_info.followers; following=product.social_info.following"></app-activity-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="element-right">
+    <div class="temperatur">
+      <h5>Current weather</h5>
+      <span class="w-line"> </span>
+      <span class="cloud"> </span>
+      <h2>+{{temperature || products[0].weather.temperature}}<sup class="degree">°</sup></h2>
+      <h6>Water +{{water || products[0].weather.water}}<sup class="degree">°</sup></h6>
+    </div>
+    <div class="teddy-bear">
+      <div class="teddy-text">
+        <h4>Social networks</h4>
+        <span class="w-line"> </span>
+        <img [src]="src2 || products[0].img2" alt="" class="img-responsive">
+      </div>
+      <div class="teddy-follow">
+        <ul>
+          <li class="folw-h">
+            <h3>{{followers || products[0].social_info.followers}}</h3>
+            <p>Followers</p>
+          </li>
+          <li>
+            <h3>{{following || products[0].social_info.following}}</h3>
+            <p>Following</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+</div>
+
+<app-footer></app-footer>
